@@ -20,6 +20,19 @@ def gross_for_director(director_data)
   movie_total
 end
 
+def directors_totals(nds)
+
+  result = {}
+  i = 0
+  while i < nds.length do 
+    # director = nds[i]
+    result[nds[i][:name]] = gross_for_director(nds[i][:name])
+    i += 1
+  end
+ result
+  
+end
+
 # def all_grosses(nds)
 #   totals_arr = []
 #   i = 0 
@@ -36,17 +49,7 @@ end
 # totals_arr
 # end
 
-def directors_totals(nds)
 
-  result = {}
-  i = 0
-  while i < nds.length do 
-    result[nds[i][:name]] = gross_for_director(nds)[i][:name]
-    i += 1
-  end
- result
-  
-end
 
 
 
