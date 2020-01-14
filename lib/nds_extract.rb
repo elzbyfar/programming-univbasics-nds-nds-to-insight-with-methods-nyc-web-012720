@@ -10,21 +10,6 @@ require 'directors_database'
 # { directorOne => allTheMoneyTheyMade, ... }
 
 
-def directors_totals(nds)
-
-  result = {}
-  i = 0
-  while i < nds.length do 
-    result[nds[i][:name]] = gross_for_director(nds)[i]
-    i += 1
-  end
- result
-  
-end
-
-
-
-
 def gross_for_director(director_data)
   movie_total = 0 
   i = 0
@@ -51,7 +36,17 @@ end
 # totals_arr
 # end
 
+def directors_totals(nds)
 
+  result = {}
+  i = 0
+  while i < nds.length do 
+    result[nds[i][:name]] = gross_for_director(nds)[i]
+    i += 1
+  end
+ result
+  
+end
 
 
 
