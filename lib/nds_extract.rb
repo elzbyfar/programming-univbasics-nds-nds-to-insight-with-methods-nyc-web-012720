@@ -21,28 +21,28 @@ def gross_for_director(director_data)
   movie_total
 end
 
-def all_grosses(nds)
-  totals_arr = []
-  i = 0 
-  while i < nds.length do 
-    total_gross = 0
-    j = 0 
-    while j < nds[i][:movies].length do 
-      total_gross = total_gross + nds[i][:movies][j][:worldwide_gross]
-      j += 1 
-    end 
-    totals_arr << total_gross
-    i += 1 
-  end
-totals_arr
-end
+# def all_grosses(nds)
+#   totals_arr = []
+#   i = 0 
+#   while i < nds.length do 
+#     total_gross = 0
+#     j = 0 
+#     while j < nds[i][:movies].length do 
+#       total_gross = total_gross + nds[i][:movies][j][:worldwide_gross]
+#       j += 1 
+#     end 
+#     totals_arr << total_gross
+#     i += 1 
+#   end
+# totals_arr
+# end
 
 def directors_totals(nds)
 
   result = {}
   i = 0
   while i < nds.length do 
-    result[nds[i][:name]] = all_grosses(nds)[i]
+    result[nds[i][:name]] = gross_for_director(nds)[i]
     i += 1
   end
  result
