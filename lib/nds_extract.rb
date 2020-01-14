@@ -10,7 +10,6 @@ require 'directors_database'
 # { directorOne => allTheMoneyTheyMade, ... }
 
 
-
 def gross_for_director(director_data)
   movie_total = 0 
   i = 0
