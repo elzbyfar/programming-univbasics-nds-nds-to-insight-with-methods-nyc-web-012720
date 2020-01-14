@@ -17,7 +17,6 @@ def gross_for_director(director_data)
     movie_total += director_data[:movies][i][:worldwide_gross]
     i+=1 
   end
-  puts director_data.class
   movie_total
 end
 
@@ -42,7 +41,7 @@ def directors_totals(nds)
   result = {}
   i = 0
   while i < nds.length do 
-    result[nds[i][:name]] = gross_for_director(nds)[i]
+    result[nds[i][:name]] = gross_for_director(nds)
     i += 1
   end
  result
